@@ -93,9 +93,12 @@ dependencies {
 
     //saml
     implementation "org.springframework.boot:spring-boot-starter-security" //1
-    implementation 'io.github.grails-spring-security-saml:spring-security-saml:5.0.0-RC3' //2
+
+    /* implementation 'io.github.grails-spring-security-saml:spring-security-saml:5.0.0-RC3' */ //2 no funciona con el archivo security/idp.xml
+    implementation 'org.grails.plugins:spring-security-saml:4.0.2' //2 traído del proyecto de confirma cursos
+
     implementation "org.springframework.boot:spring-boot-autoconfigure" //3
-    implementation 'org.grails.plugins:spring-security-core:4.0.0.RC1' //4
+    implementation 'org.grails.plugins:spring-security-core:4.0.0.RC1' //4 para s2-quickstar ? 
 }
 
 bootRun {
